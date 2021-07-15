@@ -37,6 +37,16 @@
                 <div class="panel panel-primary">
                     <div class="panel-body">
                         <div class="col md-6">
+                            @if(session()->has('success'))
+                                <div class="success success-primary">
+                                    {{ session()->get('success') }}
+                                </div>
+                            @endif
+                            @if(session()->has('error'))
+                                <div class="alert alert-danger">
+                                    {{ session()->get('error') }}
+                                </div>
+                            @endif
                             <div class="container">
                                 <form action="{{ url('add') }}" method="post" id="formData" enctype="multipart/form-data">
                                     @csrf
@@ -98,6 +108,13 @@
                                             <b>PIN: </b>
                                         </label>
                                       <input type="number" class="form-control" name="store_pin" id="store_pin" >
+                                    </div>
+                                    <br>
+                                    <div class="col-md-6">
+                                        <label for="pin" class="control-label">
+                                            <b>Upload Images: </b>
+                                        </label>
+                                      <input type="file" class="form-control" name="store_img[]" id="" multiple>
                                     </div>
                                     <br>
                                     <button type="submit" class="btn btn-primary">Submit</button>

@@ -37,3 +37,5 @@ Route::get('show', 'StoreController@show')->name('show');
 Route::get('edit/{id}', 'StoreController@edit')->name('edit');
 Route::post('update/{id}', 'StoreController@update')->name('update');
 Route::get('delete/{id}', 'StoreController@delete')->name('delete');
+
+

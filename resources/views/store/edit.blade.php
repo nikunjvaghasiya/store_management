@@ -45,7 +45,7 @@
                                         <input type="text" class="form-control" value="{{ $edit_data->store_name }}" name="store_name" id="store_name" >
                                     </div>
                                     <br>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6"> 
                                         <label for="storenumber" class="control-label">
                                             <b>Store Number: </b>
                                         </label>
@@ -56,7 +56,7 @@
                                         <label for="state" class="control-label">
                                             <b>Select State: </b>
                                         </label>
-                                        <select class="form-control" id="state_name" name="state_name" >
+                                        <select class="form-control" id="state_name" name="state_name" value="{{ $edit_data->state_name }}">
                                             <option selected disabled></option>
                                             @foreach ($state_data as $sd)
                                                 <option value="{{ $sd->state_name }}">{{ $sd->state_name }}</option>
@@ -68,7 +68,7 @@
                                         <label for="city" class="control-label">
                                             <b>Select City: </b>
                                         </label>
-                                        <select class="form-control" id="city_name" name="city_name" >
+                                        <select class="form-control" id="city_name" name="city_name" value="{{ $edit_data->city_name }}">
                                             <option selected disabled></option>
                                             @foreach ($city_data as $cd)
                                                 <option value="{{ $cd->city_name }}">{{ $cd->city_name }}</option>
@@ -100,7 +100,6 @@
                                     <button type="submit" class="btn btn-primary">Update Data</button>
                                 </form>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
